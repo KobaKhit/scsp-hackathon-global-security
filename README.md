@@ -6,6 +6,9 @@ AI-powered security intelligence platform with real-time monitoring, interactive
 
 Watch a quick overview of the platform in action:
 
+https://github.com/user-attachments/assets/5643277e-4cbe-4c85-8c95-016d76c91110
+
+
 ## Features
 
 - **Interactive World Map** - Real-time security event visualization with clickable markers
