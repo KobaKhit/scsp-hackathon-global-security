@@ -6,8 +6,6 @@ AI-powered security intelligence platform with real-time monitoring, interactive
 
 Watch a quick overview of the platform in action:
 
-<video controls src="scsp-demo.mp4" title="Title"></video>
-
 ## Features
 
 - **Interactive World Map** - Real-time security event visualization with clickable markers
