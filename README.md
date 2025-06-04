@@ -7,7 +7,7 @@ AI-powered security intelligence platform with real-time monitoring, interactive
 Watch a quick overview of the platform in action:
 
 
-<video src="./scsp-demo.mp4" width="600" controls></video>
+<video controls src="https://github.com/KobaKhit/scsp-hackathon-global-security/blob/main/scsp-demo.mp4" title="SCSP Demo">
 
 
 ## Features
