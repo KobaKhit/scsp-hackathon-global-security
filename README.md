@@ -2,14 +2,15 @@
 
 AI-powered security intelligence platform with real-time monitoring, interactive mapping, and multimodal analysis capabilities.
 
-## 📹 Demo
+## Demo
 
 Watch a quick overview of the platform in action:
 
-![](./scsp-demo.mp4)
+
+<video src="./scsp-demo.mp4" width="600" controls></video>
 
 
-## 🌟 Features
+## Features
 
 - **Interactive World Map** - Real-time security event visualization with clickable markers
 - **AI Intelligence Suite** - GPT-4o chat, vision analysis, audio transcription, web search
@@ -17,7 +18,7 @@ Watch a quick overview of the platform in action:
 - **Event Management** - Add, view, and delete security events with streaming web search
 - **Security Events MCP Integration** - Connect with Model Context Protocol for enhanced AI assistant capabilities when analyzing global security events and opportunities
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 - Python 3.10+
@@ -60,7 +61,7 @@ The platform features an **autonomous search agent swarm** for continuous global
 - **Frontend**: Vanilla JavaScript, Leaflet.js, Chart.js
 - **Data**: JSON files for demo data, public and private APIs in production 
 
-## 💡 Usage
+## Usage
 1. **Map View** - Explore security events on interactive world map
 2. **Upload Intelligence** - Analyze satellite images or audio files
 3. **AI Chat** - Ask security questions, get analysis and operationalize intelligence
@@ -72,7 +73,7 @@ The platform features an **autonomous search agent swarm** for continuous global
    - Stop individual agents or entire swarm
 6. **Events List** - View, manage, filter, and delete events
 
-## 🔧 Key API Endpoints
+## Key API Endpoints
 
 ### Main App (Port 8000)
 - `GET /api/events` - Get security events
