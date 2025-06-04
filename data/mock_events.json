@@ -1,0 +1,334 @@
+{
+  "events": [
+    {
+      "id": 1,
+      "title": "AIS Signal Gap in South China Sea",
+      "description": "Multiple vessels lost AIS tracking in contested waters near Spratly Islands. Potential illicit activity or electronic warfare.",
+      "category": "maritime",
+      "severity": "high",
+      "location": "South China Sea",
+      "lat": 9.5,
+      "lon": 113.5,
+      "timestamp": "2024-01-15T14:30:00Z",
+      "source": "Maritime Traffic Analysis",
+      "tags": [
+        "ais",
+        "shipping",
+        "contested-waters"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Supply Chain Disruption at Port of Shanghai",
+      "description": "Container ship backlog increases by 300% following dock worker strikes. Critical impact on US-China trade routes.",
+      "category": "supply-chain",
+      "severity": "medium",
+      "location": "Shanghai, China",
+      "lat": 31.2,
+      "lon": 121.5,
+      "timestamp": "2024-01-15T09:15:00Z",
+      "source": "Port Monitoring System",
+      "tags": [
+        "trade",
+        "shipping",
+        "labor-dispute"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Severe Drought Impacts Agriculture in East Africa",
+      "description": "Satellite analysis shows 40% crop yield reduction in Kenya and Ethiopia. Food security alert issued for 15 million people.",
+      "category": "climate",
+      "severity": "critical",
+      "location": "Horn of Africa",
+      "lat": 2.0,
+      "lon": 38.0,
+      "timestamp": "2024-01-14T12:00:00Z",
+      "source": "Climate Monitoring",
+      "tags": [
+        "drought",
+        "food-security",
+        "migration-risk"
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Rare Earth Mining Expansion Detected",
+      "description": "Satellite imagery reveals new mining operations in restricted areas. Potential impact on global semiconductor supply chain.",
+      "category": "supply-chain",
+      "severity": "medium",
+      "location": "Inner Mongolia, China",
+      "lat": 40.8,
+      "lon": 111.9,
+      "timestamp": "2024-01-12T08:45:00Z",
+      "source": "Satellite Analysis",
+      "tags": [
+        "rare-earth",
+        "mining",
+        "semiconductors"
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Unusual Vessel Movements Near Arctic Shipping Route",
+      "description": "Increase in military vessel activity along Northern Sea Route. Potential implications for Arctic sovereignty claims.",
+      "category": "maritime",
+      "severity": "medium",
+      "location": "Arctic Ocean",
+      "lat": 75.0,
+      "lon": 100.0,
+      "timestamp": "2024-01-11T22:15:00Z",
+      "source": "Arctic Monitoring",
+      "tags": [
+        "arctic",
+        "sovereignty",
+        "shipping-routes"
+      ]
+    },
+    {
+      "id": 11,
+      "title": "Climate-Induced Flooding Threatens Supply Routes",
+      "description": "Severe flooding in Bangladesh disrupts major transportation corridors affecting textile and electronics supply chains to global markets.",
+      "category": "climate",
+      "severity": "high",
+      "location": "Bangladesh",
+      "lat": 23.7,
+      "lon": 90.4,
+      "timestamp": "2024-01-16T06:30:00Z",
+      "source": "Climate Impact Assessment",
+      "tags": [
+        "flooding",
+        "supply-chain",
+        "climate-change"
+      ]
+    },
+    {
+      "id": 12,
+      "title": "Suspicious Maritime Activity in Red Sea",
+      "description": "Unexplained vessel clustering near international shipping lanes. AIS transponders show irregular patterns suggesting coordinated activity.",
+      "category": "maritime",
+      "severity": "medium",
+      "location": "Red Sea",
+      "lat": 20.0,
+      "lon": 38.0,
+      "timestamp": "2024-01-15T18:45:00Z",
+      "source": "Maritime Intelligence",
+      "tags": [
+        "shipping-security",
+        "vessel-tracking",
+        "red-sea"
+      ]
+    },
+    {
+      "id": 13,
+      "title": "Heat Wave Disrupts Agricultural Production",
+      "description": "Record temperatures across India's wheat belt cause crop failures. Expected 25% reduction in wheat exports affecting global food markets.",
+      "category": "climate",
+      "severity": "high",
+      "location": "Northern India",
+      "lat": 28.7,
+      "lon": 77.1,
+      "timestamp": "2024-01-14T10:20:00Z",
+      "source": "Agricultural Monitoring",
+      "tags": [
+        "heat-wave",
+        "agriculture",
+        "food-security"
+      ]
+    },
+    {
+      "id": 14,
+      "title": "Container Ship Backlog at Suez Canal",
+      "description": "Technical issues and increased traffic create 5-day delays for container vessels. Impact on European supply chains expected.",
+      "category": "supply-chain",
+      "severity": "medium",
+      "location": "Suez Canal, Egypt",
+      "lat": 30.0,
+      "lon": 32.3,
+      "timestamp": "2024-01-16T14:15:00Z",
+      "source": "Suez Canal Authority",
+      "tags": [
+        "suez-canal",
+        "shipping-delays",
+        "logistics"
+      ]
+    },
+    {
+      "id": 15,
+      "title": "Typhoon Threatens Philippine Supply Chains",
+      "description": "Category 4 typhoon approaching major manufacturing regions. Electronics and automotive supply chains at risk of disruption.",
+      "category": "climate",
+      "severity": "high",
+      "location": "Philippines",
+      "lat": 14.6,
+      "lon": 121.0,
+      "timestamp": "2024-01-17T02:00:00Z",
+      "source": "Weather Intelligence",
+      "tags": [
+        "typhoon",
+        "manufacturing",
+        "supply-disruption"
+      ]
+    },
+    {
+      "title": "Increased Tariffs on Chinese Electronics by the U.S.",
+      "description": "The United States announced the imposition of increased tariffs on Chinese electronics, citing unfair trading practices and intellectual property theft. This has led to heightened tensions and increased risks of cyber retaliations from Chinese state-sponsored actors targeting U.S. infrastructure.",
+      "category": "cyber",
+      "severity": "high",
+      "location": "Washington, D.C., USA",
+      "timestamp": "2023-10-15T00:00:00Z",
+      "source": "Web Search",
+      "tags": [
+        "tariffs",
+        "cybersecurity",
+        "U.S.-China relations",
+        "trade"
+      ],
+      "id": 16,
+      "lat": 38.9,
+      "lon": -77.0
+    },
+    {
+      "title": "EU Reimposes Tariffs on Brazilian Steel",
+      "description": "The European Union decided to reimpose tariffs on steel imports from Brazil due to alleged anticompetitive subsidies. This move could lead to retaliatory measures and increased industrial espionage attempts targeting European steel manufacturers.",
+      "category": "economic",
+      "severity": "medium",
+      "location": "Brussels, Belgium",
+      "timestamp": "2023-10-10T00:00:00Z",
+      "source": "Web Search",
+      "tags": [
+        "tariffs",
+        "EU-Brazil relations",
+        "industrial espionage",
+        "trade"
+      ],
+      "id": 17,
+      "lat": 50.8503,
+      "lon": 4.3517
+    },
+    {
+      "title": "Japan Imposes Tariffs on South Korean Lithium Batteries",
+      "description": "Japan has announced tariffs on South Korean lithium batteries following a trade dispute over environmental compliance standards. This could disrupt the global technology supply chain and lead to regional trade security threats.",
+      "category": "supply-chain",
+      "severity": "medium",
+      "location": "Tokyo, Japan",
+      "timestamp": "2023-10-12T00:00:00Z",
+      "source": "Web Search",
+      "tags": [
+        "tariffs",
+        "Japan-South Korea relations",
+        "technology",
+        "trade"
+      ],
+      "id": 18,
+      "lat": 35.7,
+      "lon": 139.7
+    },
+    {
+      "title": "Unauthorized Drone Incident at Taylor Swift Concert",
+      "description": "During a sold-out concert at the Miami Hard Rock Stadium, an unauthorized drone was detected hovering over the venue. Security personnel quickly identified the drone and coordinated with local law enforcement to have it grounded. The operator was located and detained for questioning.",
+      "category": "social",
+      "severity": "medium",
+      "location": "Miami, Florida, USA",
+      "timestamp": "2023-10-20T00:00:00Z",
+      "source": "Web Search",
+      "tags": [
+        "concert",
+        "drone",
+        "security",
+        "Taylor Swift"
+      ],
+      "id": 19,
+      "lat": 25.7617,
+      "lon": -80.1918
+    },
+    {
+      "title": "Security Breach at Taylor Swift's Private Residence",
+      "description": "An attempted break-in was thwarted at Taylor Swift’s Nashville home. A suspect was apprehended after triggering motion sensors. The individual was carrying unauthorized surveillance equipment, indicating intent to unlawfully capture personal information.",
+      "category": "social",
+      "severity": "high",
+      "location": "Nashville, Tennessee, USA",
+      "timestamp": "2023-10-18T00:00:00Z",
+      "source": "Web Search",
+      "tags": [
+        "break-in",
+        "home security",
+        "Taylor Swift"
+      ],
+      "id": 20,
+      "lat": 36.1627,
+      "lon": -86.7816
+    },
+    {
+      "title": "Cybersecurity Threat Against Taylor Swift’s Online Platforms",
+      "description": "A cybersecurity report details an attempted cyberattack against Taylor Swift’s official websites and social media accounts. Hackers tried to infiltrate the platforms with phishing scams aimed at obtaining sensitive information.",
+      "category": "cyber",
+      "severity": "medium",
+      "location": "New York City, New York, USA",
+      "timestamp": "2023-10-23T00:00:00Z",
+      "source": "Web Search",
+      "tags": [
+        "cybersecurity",
+        "phishing",
+        "Taylor Swift"
+      ],
+      "id": 21,
+      "lat": 40.7128,
+      "lon": -74.006
+    },
+    {
+      "title": "Security Breach at NBA All-Star Weekend",
+      "description": "During the NBA All-Star Weekend festivities, a significant security breach occurred when a group of unauthorized individuals gained access to the player-only area at the Gainbridge Fieldhouse. The breach was discovered quickly, and law enforcement was called to remove the intruders. This incident raised concerns about the efficacy of the event's security protocols, prompting an immediate review and enhancement of security measures, including the deployment of advanced biometric access systems to prevent future breaches.",
+      "category": "security",
+      "severity": "high",
+      "location": "Indianapolis, Indiana",
+      "timestamp": "2024-02-16T00:00:00Z",
+      "source": "Web Search",
+      "tags": [
+        "NBA",
+        "security breach",
+        "event security",
+        "biometric systems"
+      ],
+      "id": 22,
+      "lat": 39.7684,
+      "lon": -86.1581
+    },
+    {
+      "title": "Cyber Attack on NBA Merchandise Vendor",
+      "description": "A major cyber attack targeted the online platform of an NBA merchandise vendor, affecting thousands of customer accounts. Cybersecurity experts revealed that sensitive customer information, including credit card details, may have been compromised. The attack emphasized the need for improved cybersecurity measures across all vendor platforms associated with the NBA, as these breaches could potentially damage the league's reputation and undermine consumer confidence.",
+      "category": "cyber",
+      "severity": "critical",
+      "location": "New York, New York",
+      "timestamp": "2024-02-23T00:00:00Z",
+      "source": "Web Search",
+      "tags": [
+        "NBA",
+        "cyber attack",
+        "data breach",
+        "cybersecurity"
+      ],
+      "id": 23,
+      "lat": 40.7,
+      "lon": -74.0
+    },
+    {
+      "title": "Drone Interference Incident at Barclays Center",
+      "description": "An unauthorized drone was detected flying near Barclays Center during a Brooklyn Nets game, causing a temporary pause in the game as security protocols were enacted. The drone's operator was identified and apprehended by local authorities, who are investigating potential links to illegal surveillance activities. This incident underscores the growing security challenges posed by drone technology in securing large public events and has led to calls for increased investment in anti-drone measures by sports venues across the country.",
+      "category": "security",
+      "severity": "medium",
+      "location": "Brooklyn, New York",
+      "timestamp": "2024-03-03T00:00:00Z",
+      "source": "Web Search",
+      "tags": [
+        "NBA",
+        "drone",
+        "security",
+        "public event"
+      ],
+      "id": 24,
+      "lat": 40.6782,
+      "lon": -73.9442
+    }
+  ]
+}

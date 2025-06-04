@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global AI Security Insights Platform</title>
+    
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" 
+          integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" 
+          crossorigin=""/>
+    
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <!-- Marked.js for markdown rendering -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="header-left">
+                    <h1 class="header-title">🚀 Global AI Security Insights Platform</h1>
+                </div>
+                <div class="header-right">
+                    <div class="header-stats">
+                        <div class="stat-item">
+                            <span class="stat-value" id="event-count">0</span>
+                            <span class="stat-label">Active Events</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value" id="regions-monitored">0</span>
+                            <span class="stat-label">Regions Monitored</span>
+                        </div>
+                        <div class="status-indicator" id="system-status">
+                            <span class="status-dot active"></span>
+                            <span>System Online</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="main-container">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <div class="sidebar-section">
+                    <h3>View Selection</h3>
+                    <div class="view-tabs">
+                        <button id="map-tab" class="tab-btn active" data-view="map">🗺️ Map View</button>
+                        <button id="events-tab" class="tab-btn" data-view="events">📋 Events</button>
+                        <button id="intelligence-tab" class="tab-btn" data-view="intelligence">🧠 Intelligence</button>
+                    </div>
+                </div>
+
+                <div class="sidebar-section">
+                    <h3><i class="fas fa-search"></i> Web Search Intelligence</h3>
+                    <div class="upload-section">
+                        <div class="upload-option">
+                            <input type="text" id="web-search-query" class="form-control" placeholder="Search terms (comma-separated): 'Ukraine conflict, South China Sea, ISIS attacks'">
+                            <div style="display: flex; gap: 0.5rem; margin-top: 0.5rem;">
+                                <button id="web-search-preview-btn" class="btn btn--secondary btn--sm" style="flex: 1;">
+                                    <i class="fas fa-eye"></i> Preview
+                                </button>
+                                <button id="deploy-search-agents-btn" class="btn btn--primary btn--sm" style="flex: 1;" data-deployed="false">
+                                    <i class="fas fa-robot"></i> Deploy Agents
+                                </button>
+                            </div>
+                            <div id="web-search-status" style="margin-top: 0.5rem; font-size: 0.8rem; color: #94a3b8;"></div>
+                            <div id="active-agents" style="margin-top: 0.5rem;">
+                                <!-- Active agents will be displayed here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sidebar-section">
+                    <div class="section-header">
+                        <h3>Event Types</h3>
+                        <button id="select-all-types" class="select-all-btn">Select All</button>
+                    </div>
+                    <div id="event-type-filters" class="filter-group">
+                        <!-- Event type filters will be dynamically generated here -->
+                    </div>
+                </div>
+
+                <div class="sidebar-section">
+                    <div class="section-header">
+                        <h3>Severity</h3>
+                        <button id="select-all-severity" class="select-all-btn">Select All</button>
+                    </div>
+                    <div class="filter-group">
+                        <label class="filter-item">
+                            <input type="checkbox" id="severity-critical" checked>
+                            <span class="status status--error">Critical</span>
+                        </label>
+                        <label class="filter-item">
+                            <input type="checkbox" id="severity-high" checked>
+                            <span class="status status--warning">High</span>
+                        </label>
+                        <label class="filter-item">
+                            <input type="checkbox" id="severity-medium" checked>
+                            <span class="status status--warning">Medium</span>
+                        </label>
+                        <label class="filter-item">
+                            <input type="checkbox" id="severity-low" checked>
+                            <span class="status status--success">Low</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="sidebar-section">
+                    <h3><i class="fas fa-upload"></i> Intelligence Upload</h3>
+                    <div class="upload-section">
+                        <div class="upload-option">
+                            <label for="image-upload" class="upload-btn disabled" title="Coming Soon - Backend Implementation in Progress">
+                                <i class="fas fa-satellite"></i> Upload Satellite Image
+                                <span class="coming-soon-badge">Coming Soon</span>
+                            </label>
+                            <input type="file" id="image-upload" accept="image/*" style="display: none;" disabled>
+                            <select id="analysis-type" disabled>
+                                <option value="satellite">Satellite Analysis</option>
+                                <option value="maritime">Maritime Analysis</option>
+                                <option value="infrastructure">Infrastructure</option>
+                                <option value="general">General Security</option>
+                            </select>
+                        </div>
+                        
+                        <div class="upload-option">
+                            <label for="audio-upload" class="upload-btn disabled" title="Coming Soon - Backend Implementation in Progress">
+                                <i class="fas fa-microphone"></i> Upload Audio
+                                <span class="coming-soon-badge">Coming Soon</span>
+                            </label>
+                            <input type="file" id="audio-upload" accept="audio/*" style="display: none;" disabled>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Main Content -->
+            <main class="main-content">
+                <!-- Map View -->
+                <div id="map-view" class="view active">
+                    <div class="view-header">
+                        <h2>Global Security Events Map</h2>
+                        <p>Real-time monitoring of international security events affecting U.S. interests</p>
+                        <div class="map-controls">
+                            <button id="reset-map-btn" class="map-btn reset-map">
+                                <i class="fas fa-home"></i> Reset View
+                            </button>
+                            <button id="map-chat-toggle" class="map-btn chat-toggle">
+                                <i class="fas fa-comments"></i> AI Assistant
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="map-content">
+                        <div id="world-map" class="map-container"></div>
+                        
+                        <!-- Map Chat Sidebar -->
+                        <div id="map-chat-sidebar" class="map-chat-sidebar">
+                            <div class="map-chat-header">
+                                <h4><i class="fas fa-robot"></i> AI Security Assistant</h4>
+                                <button id="map-chat-close" class="close-btn">
+                                    <i class="fas fa-times"></i>
+                                </button>
+                            </div>
+                            
+                            <div class="map-chat-container">
+                                <div id="map-chat-messages" class="chat-messages">
+                                    <div class="message ai-message">
+                                        <div class="message-content">
+                                            <strong>AI Agent:</strong> I'm your map-based security analyst with access to all current events data. I can analyze security patterns, provide regional threat assessments, summarize events by category or severity, and answer questions about specific locations or events visible on the map.
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="map-quick-questions">
+                                    <h5>Quick Analysis:</h5>
+                                    <button class="quick-q-btn map-quick-btn" data-question="Analyze events by geographic region">Regional Analysis</button>
+                                    <button class="quick-q-btn map-quick-btn" data-question="Show me the current threat breakdown">Threat Breakdown</button>
+                                </div>
+                                
+                                <div class="map-chat-input-container">
+                                    <input type="text" id="map-chat-input" class="form-control" placeholder="Ask about events on the map...">
+                                    <button id="map-send-chat" class="btn btn--primary">
+                                        <i class="fas fa-paper-plane"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Events List View -->
+                <div id="events-view" class="view">
+                    <div class="view-header">
+                        <h2>Security Events Feed</h2>
+                        <div class="events-controls">
+                            <input type="text" id="events-search" class="form-control" placeholder="Search events...">
+                            <select id="events-sort" class="form-control">
+                                <option value="newest">Newest First</option>
+                                <option value="oldest">Oldest First</option>
+                                <option value="severity">By Severity</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div id="events-list" class="events-list"></div>
+                </div>
+
+                <!-- Intelligence Panel -->
+                <div id="intelligence-view" class="view">
+                    <div class="view-header">
+                        <h2>AI Intelligence Panel</h2>
+                        <p>Chat with our AI agent and explore security patterns</p>
+                    </div>
+                    
+                    <div class="intelligence-content">
+                        <div class="intelligence-left">
+                            <div class="chat-container">
+                                <div id="chat-messages" class="chat-messages">
+                                    <div class="message ai-message">
+                                        <div class="message-content">
+                                            <strong>AI Agent:</strong> Hello! I'm your AI security analyst. Ask me about global security patterns, specific events, or request strategic recommendations. Try asking: "What's the food security situation in East Africa?" or "Show me AIS gap patterns."
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="quick-questions">
+                                <h4>Quick Questions:</h4>
+                                <button class="quick-q-btn" data-question="Give me a summary of all current security events">Current Events Summary</button>
+                                <button class="quick-q-btn" data-question="What are the critical threats we're tracking?">Critical Threat Analysis</button>
+                            </div>
+                            
+                            <div class="chat-input-container">
+                                <input type="text" id="chat-input" class="form-control" placeholder="Ask about security patterns, specific events, or recommendations...">
+                                <button id="send-chat" class="btn btn--primary">Send</button>
+                            </div>
+                        </div>
+                        
+                        <div class="intelligence-right">
+                            <div class="metrics-panel">
+                                <h3>Security Metrics</h3>
+                                <div class="metric-tiles">
+                                    <div class="metric-tile">
+                                        <div class="metric-value" id="total-events">0</div>
+                                        <div class="metric-label">Total Events</div>
+                                    </div>
+                                    <div class="metric-tile">
+                                        <div class="metric-value" id="high-severity">0</div>
+                                        <div class="metric-label">High Severity</div>
+                                    </div>
+                                    <div class="metric-tile">
+                                        <div class="metric-value" id="active-regions">0</div>
+                                        <div class="metric-label">Active Regions</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loading-overlay">
+        <div class="loading-spinner">
+            <i class="fas fa-spinner fa-spin"></i>
+            <p>Processing intelligence data...</p>
+        </div>
+    </div>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" 
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" 
+            crossorigin=""></script>
+    
+    <script src="/static/main.js"></script>
+</body>
+</html> 

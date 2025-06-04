@@ -1,0 +1,183 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "High Risk Maritime Zone",
+        "type": "maritime_risk",
+        "risk_level": "high",
+        "description": "Contested waters with frequent AIS gaps and suspicious vessel activity"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [110.0, 6.0],
+          [118.0, 6.0],
+          [118.0, 12.0],
+          [110.0, 12.0],
+          [110.0, 6.0]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Major Supply Chain Corridor",
+        "type": "supply_chain",
+        "importance": "critical",
+        "description": "Primary trade route connecting Asia-Pacific manufacturing to global markets"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [121.5, 31.2],
+          [103.8, 1.3],
+          [80.2, 13.1],
+          [51.5, 25.3],
+          [31.2, 30.1],
+          [2.3, 48.9]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Arctic Shipping Route",
+        "type": "arctic_route",
+        "status": "emerging",
+        "description": "Northern Sea Route becoming increasingly accessible due to climate change"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [58.6, 69.3],
+          [82.9, 73.5],
+          [125.3, 71.8],
+          [159.7, 66.8],
+          [-164.5, 66.8]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Food Security Risk Zone",
+        "type": "food_security",
+        "risk_level": "critical",
+        "description": "Region experiencing severe drought and food shortages"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [33.0, -5.0],
+          [51.0, -5.0],
+          [51.0, 15.0],
+          [33.0, 15.0],
+          [33.0, -5.0]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Cyber Threat Region",
+        "type": "cyber_security",
+        "threat_level": "elevated",
+        "description": "Region with increased state-sponsored cyber activity"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [14.0, 45.0],
+          [30.0, 45.0],
+          [30.0, 56.0],
+          [14.0, 56.0],
+          [14.0, 45.0]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Critical Mineral Deposits",
+        "type": "resources",
+        "strategic_importance": "high",
+        "description": "Rare earth and lithium mining areas critical for technology supply chains"
+      },
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [111.9, 40.8],
+          [-109.5, 38.5],
+          [133.8, -23.7],
+          [-70.7, -22.1]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Social Stability Monitor Zone",
+        "type": "social_stability",
+        "stability_index": "declining",
+        "description": "Region experiencing social unrest and political tensions"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [-75.0, -35.0],
+          [-45.0, -35.0],
+          [-45.0, -10.0],
+          [-75.0, -10.0],
+          [-75.0, -35.0]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Strategic Chokepoint",
+        "type": "chokepoint",
+        "importance": "critical",
+        "description": "Strait of Hormuz - critical oil and gas transit point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [56.3, 26.6]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Strategic Chokepoint",
+        "type": "chokepoint",
+        "importance": "critical",
+        "description": "Strait of Malacca - major shipping bottleneck"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [99.0, 2.5]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Climate Migration Risk Zone",
+        "type": "migration",
+        "risk_level": "high",
+        "description": "Areas at risk of climate-induced population displacement"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [88.0, 20.5],
+          [93.0, 20.5],
+          [93.0, 26.0],
+          [88.0, 26.0],
+          [88.0, 20.5]
+        ]]
+      }
+    }
+  ]
+} 
