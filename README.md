@@ -1,3 +1,5 @@
+![Python 3.11](https://shields.io/badge/dependencies-Python_3.11-blue)
+
 # 🚀 Global AI Security Insights Platform
 
 AI-powered security intelligence platform with real-time monitoring, interactive mapping, and multimodal analysis capabilities.
